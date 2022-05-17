@@ -31,70 +31,63 @@ public class Main {
 
         System.out.println("Task 3");
 
-        double amountBanana = 5;
-        double banana = 80;
-        double amountMilk = 200;
-        double milk = 1.05;
-        double amountIceCreme = 2;
-        double iceCreme = 100;
-        double amountEgg =4;
-        double egg =70;
-        double kilogram = 1000;
+        int amountBanana = 5;
+        int banana = 80;
+        //int amountMilk = 200;
+        int milk = 200 / 100;
+        int milkWegth = 105;
+        int amountIceCreme = 2;
+        int iceCreme = 100;
+        int amountEgg =4;
+        int egg =70;
+        int grammInKg = 1000;
 
-        double cocktail = (amountBanana * banana + amountMilk * milk + amountIceCreme * iceCreme + amountEgg * egg) / kilogram;
-
-        System.out.println("cocktail = " + cocktail +" kg");
+        int cocktail = (amountBanana * banana) + (milk * milkWegth) + (amountIceCreme * iceCreme) + (amountEgg * egg);
+        double total = cocktail / (grammInKg * 1.0);
+        System.out.println("cocktail = " + total +" kg");
 
 // Задача 4 //
+        System.out.println("Task 4");
 
-        double theWight = 7;
-        double weghtLoss1 = 250;
-        double weghtLoss2 = 500;
-        double kilogram1 = 1000;// переменная килограмм инициализированна в задаче выше, но на всякий случай создам еще. //
-        double dayWeghtLoss1 = theWight / (weghtLoss1 / kilogram1);
-        double dayWeghtLoss2 = theWight / (weghtLoss2 / kilogram1);
-        double average = (dayWeghtLoss1 + dayWeghtLoss2) / 2;
-        //System.out.println("dayWeghtLoss1 = " + dayWeghtLoss1 + " days");
-        //System.out.println("dayWeghtLoss2 = " + dayWeghtLoss2 + " days");
-        //System.out.println("average = " + average + " days");
+        int theWight = 7;
+        int weghtLoss1 = 250;
+        int weghtLoss2 = 500;
+
+        int grInKg = 1000;
+        int weghtInGr = theWight * grInKg;
+
+        int dayWeghtLoss1 = weghtInGr / weghtLoss1;
+        int dayWeghtLoss2 = weghtInGr / weghtLoss2;
+        int average = (dayWeghtLoss1 + dayWeghtLoss2) / 2;
+
+        System.out.println("dayWeghtLoss1 = " + dayWeghtLoss1 + " days");
+        System.out.println("dayWeghtLoss2 = " + dayWeghtLoss2 + " days");
+        System.out.println("average = " + average + " days");
 
   // Задача 5 //
 
         System.out.println("Task 5");
-        double mashaSalary = 67760;
-        double denisSalary = 83690;
-        double kristinSalary = 76230;
-        double monthSalaryIncrease = 0.1;
-        double year = 12;
-        double mashaYearlySalary = mashaSalary * year;
-        double denisYearlySalary = denisSalary * year;
-        double kristinYearlySalary = kristinSalary * year;
-        double mashaMonthSalaryIncrease = (mashaSalary * monthSalaryIncrease) + mashaSalary;
-        double denisMonthSalaryIncrease = (denisSalary * monthSalaryIncrease) + denisSalary;
-        double kristinMonthSalaryIncrease = (kristinSalary * monthSalaryIncrease) + kristinSalary;
-        double mashaYearAfterSalaryIncrease = mashaMonthSalaryIncrease * year;
-        double denisYearAfterSalaryIncrease = denisMonthSalaryIncrease * year;
-        double kristinYearAfterSalaryIncrease = kristinMonthSalaryIncrease * year;
-        double mashaDifferenceSalary = mashaYearAfterSalaryIncrease - mashaYearlySalary;
-        double denisDifferenceSalary = denisYearAfterSalaryIncrease - denisYearlySalary;
-        double kristineDifferenceSalary = kristinYearAfterSalaryIncrease - kristinYearlySalary;
+        int percent = 10;
+        double monthSalaryIncrease = percent / (100 * 1.0);
+
+        int mashaSalary = 67_760;
+        int denisSalary = 83_690;
+        int kristinSalary = 76_230;
+
+        int year = 12;
+
+        int mashaMonthSalaryIncrease = (int) (mashaSalary * monthSalaryIncrease) + mashaSalary;
+        int denisMonthSalaryIncrease = (int) (denisSalary * monthSalaryIncrease) + denisSalary;
+        int kristinMonthSalaryIncrease = (int) (kristinSalary * monthSalaryIncrease) + kristinSalary;
+
+        int mashaDifferenceSalary = (mashaMonthSalaryIncrease - mashaSalary) * year;
+        int denisDifferenceSalary = (denisMonthSalaryIncrease - denisSalary) * year;
+        int kristineDifferenceSalary = (kristinMonthSalaryIncrease - kristinSalary) * year;
 
         System.out.println("Masha now receives " + mashaMonthSalaryIncrease + " rubles. Annual income increased by " + mashaDifferenceSalary + "rubles.");
         System.out.println("Denis now receives " + denisMonthSalaryIncrease + " rubles. Annual income increased by " + denisDifferenceSalary + "rubles.");
         System.out.println("Kristin now receives " + kristinMonthSalaryIncrease + " rubles. Annual income increased by " + kristineDifferenceSalary + "rubles.");
 
-        //System.out.println("mashaYearlySalary = " + mashaYearlySalary);
-        //System.out.println("denisYearlySalary = " + denisYearlySalary);
-        //System.out.println("kristinYearlySalary = " + kristinYearlySalary);
-        //System.out.println("mashaMonthSalaryIncrease = " + mashaMonthSalaryIncrease);
-        //System.out.println("denisMonthSalaryIncrease = " + denisMonthSalaryIncrease);
-        //System.out.println("kristinMonthSalaryIncrease = " + kristinMonthSalaryIncrease);
-        //System.out.println("mashaYearAfterSalaryIncrease = " + mashaYearAfterSalaryIncrease);
-        //System.out.println("denisYearAfterSalaryIncrease = " + denisYearAfterSalaryIncrease);
-        //System.out.println("kristinYearAfterSalaryIncrease = " + kristinYearAfterSalaryIncrease);
-        //System.out.println("mashaDifferenceSalary = " + mashaDifferenceSalary);
-        //System.out.println("denisDifferenceSalary = " + denisDifferenceSalary);
-        //System.out.println("kristineDifferenceSalary = " + kristineDifferenceSalary);
 
 
     }
